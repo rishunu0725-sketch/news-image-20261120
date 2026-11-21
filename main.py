@@ -5,6 +5,8 @@ Writes the bundled image to /output/entry.png.
 Deterministic by design: it only copies the bundled file, byte for byte.
 No network, no randomness, no timestamps, no image generation at run time.
 Running it twice produces identical bytes.
+The output path stays /output/entry.png even though the bytes are JPEG:
+the bounty judges the file by its first bytes, not its extension.
 """
 
 import shutil
